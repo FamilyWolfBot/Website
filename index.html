@@ -416,6 +416,16 @@
     .prop-amenity-list { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
     .prop-amenity-item { display:flex; align-items:center; gap:.5rem; font-size:.82rem; color:#555; }
     .prop-amenity-icon { font-size:1.05rem; flex-shrink:0; }
+    .prop-book-btns { display:flex; gap:.7rem; margin-top:1.4rem; }
+    .prop-book-btn {
+      flex:1; display:flex; align-items:center; justify-content:center; gap:.45rem;
+      padding:.65rem .5rem; border-radius:12px; text-decoration:none;
+      font-size:.78rem; font-weight:700; letter-spacing:.5px;
+      transition:transform .2s, box-shadow .2s;
+    }
+    .prop-book-btn:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,.15); }
+    .prop-book-btn.air  { background:#ff5a5f; color:#fff; }
+    .prop-book-btn.bkm  { background:#0071c2; color:#fff; }
 
     /* Shared amenities strip */
     .shared-strip { background:#f8f8f3; border-radius:18px; padding:1.7rem 2rem; margin-top:.5rem; }
@@ -895,6 +905,18 @@
           <div class="prop-amenity-item"><span class="prop-amenity-icon">🔒</span>Check-in flexible</div>
           <div class="prop-amenity-item"><span class="prop-amenity-icon">💬</span>Host 24/7</div>
         </div>
+        <div class="prop-book-btns">
+          <a href="https://www.airbnb.es/rooms/1594175512173747674?source_impression_id=p3_1772572156_P3vktYnkVzlQ4VXn"
+             target="_blank" rel="noopener noreferrer" class="prop-book-btn air">
+            <svg width="14" height="14" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4C13 4 7 10 7 18c0 11 13 26 13 26s13-15 13-26c0-8-6-14-13-14z" fill="#fff"/><circle cx="20" cy="18" r="4" fill="#ff5a5f"/></svg>
+            Reservar Airbnb
+          </a>
+          <a href="https://www.booking.com/hotel/cr/lodge-el-chorro.es.html?aid=2311236&label=es-es-booking-desktop-onknyt5TBrS8m9RnGd%2A6fgS652829001115%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9047034%3Ali%3Adec%3Adm&sid=d91fb12f30cbfdbdac4f2798bbcaf27b&chal_t=1772572167678&force_referer="
+             target="_blank" rel="noopener noreferrer" class="prop-book-btn bkm">
+            <svg width="14" height="14" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#fff"/><text x="20" y="27" text-anchor="middle" font-size="18" font-weight="900" font-family="Arial" fill="#0071c2">B.</text></svg>
+            Reservar Booking
+          </a>
+        </div>
       </div>
 
       <!-- Property 2: Hostal -->
@@ -917,6 +939,18 @@
           <div class="prop-amenity-item"><span class="prop-amenity-icon">🌿</span>Área común exterior</div>
           <div class="prop-amenity-item"><span class="prop-amenity-icon">🔒</span>Casilleros</div>
           <div class="prop-amenity-item"><span class="prop-amenity-icon">💬</span>Host 24/7</div>
+        </div>
+        <div class="prop-book-btns">
+          <a href="https://www.airbnb.es/rooms/1623973250742419382?source_impression_id=p3_1772572223_P3nn_wItm9iNJtxN"
+             target="_blank" rel="noopener noreferrer" class="prop-book-btn air">
+            <svg width="14" height="14" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 4C13 4 7 10 7 18c0 11 13 26 13 26s13-15 13-26c0-8-6-14-13-14z" fill="#fff"/><circle cx="20" cy="18" r="4" fill="#ff5a5f"/></svg>
+            Reservar Airbnb
+          </a>
+          <a href="https://www.booking.com/hotel/cr/lodge-el-chorro.es.html?aid=2311236&label=es-es-booking-desktop-onknyt5TBrS8m9RnGd%2A6fgS652829001115%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9047034%3Ali%3Adec%3Adm&sid=d91fb12f30cbfdbdac4f2798bbcaf27b&chal_t=1772572167678&force_referer="
+             target="_blank" rel="noopener noreferrer" class="prop-book-btn bkm">
+            <svg width="14" height="14" viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#fff"/><text x="20" y="27" text-anchor="middle" font-size="18" font-weight="900" font-family="Arial" fill="#0071c2">B.</text></svg>
+            Reservar Booking
+          </a>
         </div>
       </div>
     </div>
