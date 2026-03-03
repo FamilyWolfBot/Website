@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Family Wolf | El Chorro Home — Paquera, Costa Rica</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Casa contenedor y hostal únicos con vistas al lago en Paquera, Costa Rica. Rodeados de lapas, monos e iguanas en la Península de Nicoya. Reserva en Airbnb o Booking.com — ¡Pura Vida!" />
+  <meta name="keywords" content="Paquera, Costa Rica, alojamiento, hostal, Airbnb, Booking, Nicoya, lago, naturaleza, lapas, ecoturismo" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Family Wolf | El Chorro Home — Paquera, Costa Rica" />
+  <meta property="og:description" content="Casa contenedor y hostal con vistas al lago en Paquera. Lapas, monos e iguanas como vecinos. Reserva en Airbnb o Booking.com." />
+  <meta property="og:image"       content="https://images.unsplash.com/photo-SR2dGJvzRAc?w=1200&auto=format" />
+  <meta property="og:locale"      content="es_CR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Family Wolf | El Chorro Home — Paquera, Costa Rica" />
+  <meta name="twitter:description" content="Casa contenedor y hostal con vistas al lago en Paquera. Lapas, monos e iguanas como vecinos. Reserva en Airbnb o Booking.com." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Raleway',sans-serif; background:#051409; overflow-x:hidden; color:#222; }
+
+    :root {
+      --jungle-dark:  #051409;
+      --jungle:       #0d3518;
+      --jungle-mid:   #1d6b32;
+      --jungle-light: #2e9e4a;
+      --tropical:     #44c767;
+      --turquoise:    #00b4d8;
+      --ocean-dark:   #023e5a;
+      --ocean:        #0277a8;
+      --sand:         #ffd166;
+      --sand-light:   #fff3b0;
+      --coral:        #ef476f;
+      --sunset:       #ff7043;
+      --gold:         #ffc107;
+      --cream:        #fffef0;
+      --lapa-red:     #c62828;
+      --lapa-blue:    #1565c0;
+      --lapa-yellow:  #f9a825;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       HERO — realistic tropical scene
+    ══════════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 2rem 1.5rem 7rem;
+      /* Real beach photo with strong readable overlay */
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(0,0,0,.52) 0%, rgba(0,0,0,.15) 60%, transparent 100%),
+        linear-gradient(180deg,
+          rgba(0,0,0,.55) 0%,
+          rgba(0,0,0,.30) 35%,
+          rgba(0,0,0,.35) 65%,
+          rgba(0,0,0,.70) 100%
+        ),
+        url('Beach.jpg') center center / cover no-repeat;
+    }
+
+    /* Light-ray shafts */
+    .light-rays {
+      position: absolute; inset: 0;
+      pointer-events: none; z-index: 1; overflow: hidden;
+    }
+    .ray {
+      position: absolute; top: 0;
+      width: 120px; height: 100%;
+      background: linear-gradient(180deg, rgba(255,165,40,.12) 0%, rgba(255,120,20,.05) 60%, transparent 100%);
+      transform-origin: top center;
+      animation: rayShimmer 8s ease-in-out infinite;
+    }
+    .ray:nth-child(1){ left:12%;  transform:skewX(-18deg); animation-delay:0s; }
+    .ray:nth-child(2){ left:30%;  transform:skewX(-10deg); animation-delay:-2s; width:80px; opacity:.7; }
+    .ray:nth-child(3){ left:55%;  transform:skewX(8deg);   animation-delay:-5s; }
+    .ray:nth-child(4){ left:72%;  transform:skewX(16deg);  animation-delay:-3s; width:90px; opacity:.6; }
+    .ray:nth-child(5){ left:88%;  transform:skewX(22deg);  animation-delay:-7s; width:70px; opacity:.5; }
+    @keyframes rayShimmer {
+      0%,100%{ opacity:.04; } 50%{ opacity:.09; }
+    }
+
+
+    /* === BEACH OCEAN LAYER === */
+    .beach-ocean {
+      position:absolute; bottom:0; left:0; width:100%;
+      pointer-events:none; z-index:3;
+    }
+
+    /* === ATMOSPHERIC HAZE === */
+    .hero-haze {
+      position:absolute; inset:0; pointer-events:none; z-index:5;
+      background:
+        radial-gradient(ellipse at 50% 52%, rgba(255,120,30,.06) 0%, transparent 55%),
+        linear-gradient(180deg, transparent 40%, rgba(10,40,60,.15) 70%, rgba(5,20,40,.28) 100%);
+    }
+
+    /* Logo */
+    .hero-logo { z-index:8; margin-bottom:1.2rem; filter:drop-shadow(0 0 28px rgba(255,200,50,.4)) drop-shadow(0 4px 16px rgba(0,0,0,.7)); }
+
+    /* Hero text */
+    .hero-content {
+      text-align:center; z-index:8; color:#fff;
+      background: rgba(0,0,0,.42);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 22px;
+      padding: 2rem 2.8rem 1.8rem;
+      border: 1px solid rgba(255,255,255,.13);
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    .hero-eyebrow {
+      font-size:.78rem; letter-spacing:5px; text-transform:uppercase;
+      color:#fff; font-weight:700; margin-bottom:.8rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,.95);
+    }
+    .hero-title {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(3rem,10vw,6.5rem); font-weight:700; line-height:1;
+      color: #ffffff;
+      text-shadow: 0 3px 18px rgba(0,0,0,.95), 0 1px 4px rgba(0,0,0,.9);
+    }
+    .hero-title em { color:var(--sand); font-style:normal; }
+    .hero-sub {
+      font-family:'Playfair Display',serif; font-style:italic;
+      font-size:clamp(.95rem,2.6vw,1.45rem); color:#ffffff; margin-top:.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,.95), 0 1px 3px rgba(0,0,0,.8);
+    }
+    .hero-loc {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-size:.82rem; letter-spacing:2px; color:#ffffff; margin:.9rem 0 .4rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,.9);
+    }
+    .badge-pv {
+      background:linear-gradient(135deg,var(--coral),var(--sunset));
+      color:#fff; padding:.3rem 1rem; border-radius:50px;
+      font-size:.74rem; font-weight:800; letter-spacing:3px; text-transform:uppercase;
+      box-shadow:0 2px 14px rgba(239,71,111,.5);
+    }
+    .hero-btns {
+      display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:1.6rem;
+    }
+    .btn {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.95rem 2.1rem; border-radius:50px;
+      font-family:'Raleway',sans-serif; font-weight:700; font-size:.93rem;
+      letter-spacing:1px; cursor:pointer; text-decoration:none;
+      transition:transform .3s, box-shadow .3s; border:none; white-space:nowrap;
+    }
+    .btn:hover { transform:translateY(-4px); }
+    .btn-airbnb  { background:linear-gradient(135deg,#ff5a5f,#c5003a); color:#fff; box-shadow:0 4px 18px rgba(255,90,95,.45); }
+    .btn-airbnb:hover  { box-shadow:0 10px 28px rgba(255,90,95,.55); }
+    .btn-booking { background:linear-gradient(135deg,#0071c2,#003580); color:#fff; box-shadow:0 4px 18px rgba(0,113,194,.45); }
+    .btn-booking:hover { box-shadow:0 10px 28px rgba(0,113,194,.55); }
+
+    .scroll-cue {
+      position:absolute; bottom:1.6rem; left:50%; transform:translateX(-50%);
+      z-index:9; text-align:center; color:rgba(255,255,255,.5);
+      font-size:.68rem; letter-spacing:3px; text-transform:uppercase;
+      cursor:pointer; animation:bobble 2.2s ease-in-out infinite;
+    }
+    .scroll-cue svg { display:block; margin:.3rem auto 0; }
+    @keyframes bobble {
+      0%,100%{ transform:translateX(-50%) translateY(0); }
+      50%{ transform:translateX(-50%) translateY(7px); }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       FLYING MACAWS / GUACAMAYOS (Ara macao)
+    ══════════════════════════════════════════════════════ */
+    .bird-lane {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 7;
+      overflow: hidden;
+    }
+    .macaw {
+      position: absolute;
+      left: 110%;
+      display: block;
+      animation: flyAcross linear infinite;
+      border-radius: 4px;
+    }
+    @keyframes flyAcross {
+      0%   { left: -20%; }
+      100% { left: 110%; }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       WAVES
+    ══════════════════════════════════════════════════════ */
+    .wave { display:block; width:100%; overflow:hidden; line-height:0; }
+
+    /* ══════════════════════════════════════════════════════
+       SHARED SECTION STYLES
+    ══════════════════════════════════════════════════════ */
+    .section { padding:5rem 1.5rem; }
+    .section-inner { max-width:1150px; margin:0 auto; }
+    .section-label { font-size:.72rem; letter-spacing:5px; text-transform:uppercase; font-weight:700; margin-bottom:.4rem; }
+    .section-title { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3.4rem); line-height:1.2; margin-bottom:1rem; }
+    .section-desc  { font-size:1.05rem; line-height:1.85; max-width:620px; }
+    .section-header{ text-align:center; margin-bottom:3rem; }
+    .section-header .section-desc { margin:0 auto; }
+
+    /* ══════════════════════════════════════════════════════
+       EXPERIENCE
+    ══════════════════════════════════════════════════════ */
+    .experience { background:linear-gradient(160deg,#fffef0,#fff3d6); }
+    .experience .section-label { color:var(--jungle); }
+    .experience .section-title { color:var(--jungle-dark); }
+    .experience .section-desc  { color:#555; }
+    .feat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.8rem; }
+    .feat-card {
+      background:#fff; border-radius:22px; padding:2rem 1.8rem;
+      text-align:center; box-shadow:0 6px 28px rgba(0,0,0,.09);
+      transition:transform .3s, box-shadow .3s;
+      border-bottom:4px solid var(--jungle-mid);
+    }
+    .feat-card:hover { transform:translateY(-6px); box-shadow:0 14px 38px rgba(0,0,0,.13); }
+    .feat-icon  { font-size:3rem; margin-bottom:.9rem; }
+    .feat-title { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--jungle-dark); margin-bottom:.45rem; }
+    .feat-desc  { color:#666; line-height:1.7; font-size:.93rem; }
+
+    /* ══════════════════════════════════════════════════════
+       WILDLIFE
+    ══════════════════════════════════════════════════════ */
+    .wildlife {
+      background:linear-gradient(160deg,#051409 0%,#0d2e14 60%,#062014 100%);
+      position:relative; overflow:hidden;
+    }
+    .wildlife::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 70% 30%, rgba(44,158,74,.12) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .wildlife .section-label { color:var(--tropical); }
+    .wildlife .section-title { color:var(--sand-light); }
+    .wildlife .section-desc  { color:rgba(255,255,255,.75); }
+    .wl-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:2rem; }
+    .wl-card {
+      background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
+      border-radius:24px; padding:2.8rem 2rem 2.2rem; text-align:center;
+      backdrop-filter:blur(8px); transition:transform .3s, background .3s, box-shadow .3s;
+      position:relative; overflow:hidden;
+    }
+    .wl-card::after { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .wl-card.lapa::after   { background:linear-gradient(90deg,var(--lapa-red),var(--lapa-blue),var(--lapa-yellow)); }
+    .wl-card.mono::after   { background:linear-gradient(90deg,#8d5524,#c68642,#6b3a2a); }
+    .wl-card.iguana::after { background:linear-gradient(90deg,#33691e,#7cb342,#1b5e20); }
+    .wl-card:hover { transform:translateY(-10px); background:rgba(255,255,255,.09); box-shadow:0 20px 50px rgba(0,0,0,.4); }
+    .wl-emoji { font-size:5rem; display:block; animation:animalSway 4s ease-in-out infinite; margin-bottom:.8rem; }
+    .wl-card:nth-child(2) .wl-emoji { animation-delay:-1.3s; }
+    .wl-card:nth-child(3) .wl-emoji { animation-delay:-2.6s; }
+    @keyframes animalSway { 0%,100%{transform:rotate(-6deg) scale(1);} 50%{transform:rotate(6deg) scale(1.05);} }
+    .wl-name  { font-family:'Playfair Display',serif; font-size:1.7rem; color:#fff; margin-bottom:.2rem; }
+    .wl-latin { font-style:italic; color:rgba(255,255,255,.45); font-size:.82rem; margin-bottom:1rem; }
+    .wl-desc  { color:rgba(255,255,255,.72); line-height:1.75; font-size:.92rem; }
+    .wl-art-strip { display:flex; justify-content:center; align-items:flex-end; gap:2rem; flex-wrap:wrap; max-width:900px; margin:3.5rem auto 0; }
+
+    /* ══════════════════════════════════════════════════════
+       VIBE / INSTAGRAM STRIP
+    ══════════════════════════════════════════════════════ */
+    .vibe-strip { background:linear-gradient(135deg,var(--sunset) 0%,var(--coral) 50%,#b5116a 100%); padding:4rem 2rem; text-align:center; }
+    .vibe-strip h2 { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,4vw,2.8rem); color:#fff; margin-bottom:.6rem; text-shadow:0 2px 8px rgba(0,0,0,.25); }
+    .vibe-strip p  { color:rgba(255,255,255,.88); font-size:1.05rem; line-height:1.7; max-width:600px; margin:0 auto 2rem; }
+    .insta-pill {
+      display:inline-flex; align-items:center; gap:.7rem;
+      background:#fff; color:#833ab4; padding:.9rem 2.2rem; border-radius:50px;
+      font-weight:800; font-size:1rem; text-decoration:none;
+      transition:transform .3s, box-shadow .3s; box-shadow:0 4px 20px rgba(0,0,0,.25);
+    }
+    .insta-pill:hover { transform:translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,.3); }
+
+    /* ══════════════════════════════════════════════════════
+       BOOKING
+    ══════════════════════════════════════════════════════ */
+    .booking-sec { background:linear-gradient(170deg,#012030 0%,#01384f 40%,#001f2f 100%); position:relative; overflow:hidden; }
+    .booking-sec::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 60%, rgba(0,180,216,.08) 0%, transparent 60%); pointer-events:none; }
+    .booking-sec .section-label { color:var(--turquoise); }
+    .booking-sec .section-title { color:#fff; }
+    .booking-sec .section-desc  { color:rgba(255,255,255,.72); }
+    .bk-cards { display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-top:3rem; }
+    .bk-card {
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12);
+      border-radius:26px; padding:2.6rem 2.2rem; width:clamp(280px,42vw,330px);
+      text-align:center; text-decoration:none; color:#fff; display:block;
+      transition:transform .35s, background .35s, box-shadow .35s; position:relative; overflow:hidden;
+    }
+    .bk-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+    .bk-card.air::before { background:linear-gradient(90deg,#ff5a5f,#c5003a); }
+    .bk-card.bkm::before { background:linear-gradient(90deg,#0071c2,#003580); }
+    .bk-card:hover { transform:translateY(-10px); background:rgba(255,255,255,.1); box-shadow:0 24px 50px rgba(0,0,0,.45); }
+    .bk-logo-row { display:flex; align-items:center; justify-content:center; gap:.7rem; margin-bottom:1.4rem; }
+    .bk-platform { font-size:1.9rem; font-weight:900; letter-spacing:-1px; }
+    .bk-platform.air { color:#ff5a5f; }
+    .bk-platform.bkm { color:#0071c2; }
+    .bk-card-title { font-family:'Playfair Display',serif; font-size:1.2rem; margin-bottom:.5rem; }
+    .bk-card-desc  { font-size:.88rem; color:rgba(255,255,255,.65); line-height:1.65; margin-bottom:1.4rem; }
+    .bk-btn { display:block; padding:.85rem 1rem; border-radius:50px; font-weight:800; font-size:.9rem; letter-spacing:1px; color:#fff; text-transform:uppercase; }
+    .bk-btn.air { background:linear-gradient(135deg,#ff5a5f,#c5003a); box-shadow:0 4px 14px rgba(255,90,95,.35); }
+    .bk-btn.bkm { background:linear-gradient(135deg,#0071c2,#003580); box-shadow:0 4px 14px rgba(0,113,194,.35); }
+    .star-row { display:flex; justify-content:center; gap:.2rem; margin-bottom:.6rem; }
+    .star { color:var(--sand); font-size:.9rem; }
+
+    /* ══════════════════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════════════════ */
+    footer { background:#020c05; padding:3.5rem 2rem 2rem; text-align:center; }
+    .footer-logo { margin-bottom:1.2rem; }
+    .footer-name { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--sand); margin-bottom:.3rem; }
+    .footer-loc  { font-size:.85rem; color:rgba(255,255,255,.4); margin-bottom:1.2rem; }
+    .footer-pv   { font-family:'Playfair Display',serif; font-style:italic; color:var(--tropical); font-size:1.15rem; margin-bottom:1.8rem; }
+    .footer-links { display:flex; flex-wrap:wrap; gap:1.5rem; justify-content:center; }
+    .footer-links a { color:rgba(255,255,255,.4); text-decoration:none; font-size:.82rem; letter-spacing:1px; text-transform:uppercase; transition:color .3s; }
+    .footer-links a:hover { color:var(--sand); }
+    .footer-copy { margin-top:2rem; font-size:.72rem; color:rgba(255,255,255,.2); }
+
+    @media(max-width:640px){
+      .bk-card{ width:100%; max-width:360px; }
+      .btn{ padding:.85rem 1.5rem; }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       STICKY NAV
+    ══════════════════════════════════════════════════════ */
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(5,20,9,.93); backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding: .7rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background .3s;
+    }
+    .nav-brand {
+      font-family:'Playfair Display',serif; color:var(--sand);
+      font-size:1.05rem; font-weight:700; text-decoration:none;
+      display:flex; align-items:center; gap:.45rem; white-space:nowrap;
+    }
+    .nav-links {
+      display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap;
+    }
+    .nav-links a {
+      color:rgba(255,255,255,.65); text-decoration:none; font-size:.73rem;
+      letter-spacing:1.5px; text-transform:uppercase; font-weight:600;
+      transition:color .2s;
+    }
+    .nav-links a:hover { color:var(--sand); }
+    .nav-cta {
+      background:linear-gradient(135deg,#ff5a5f,#c5003a); color:#fff !important;
+      padding:.4rem 1.1rem; border-radius:50px;
+      box-shadow:0 2px 10px rgba(255,90,95,.35);
+    }
+    .nav-cta:hover { box-shadow:0 6px 18px rgba(255,90,95,.5) !important; transform:translateY(-1px); }
+    .hero { padding-top: 5rem; }
+    @media(max-width:768px){
+      .nav-links .hide-mob { display:none; }
+      .nav-links { gap:.7rem; }
+    }
+    @media(max-width:480px){
+      .nav-brand span { display:none; }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       AMENITIES / PROPERTY DETAILS
+    ══════════════════════════════════════════════════════ */
+    .amenities { background:#fff; }
+    .amenities .section-label { color:var(--ocean); }
+    .amenities .section-title { color:var(--jungle-dark); }
+    .amenities .section-desc  { color:#555; }
+
+    /* Dual property cards */
+    .property-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:2rem; margin-bottom:2rem;
+    }
+    .property-card {
+      background:#fff; border-radius:26px; padding:2.2rem;
+      box-shadow:0 8px 32px rgba(0,0,0,.09);
+      border-top:5px solid var(--jungle-mid);
+      transition:transform .3s,box-shadow .3s;
+    }
+    .property-card.hostel { border-top-color:var(--ocean); }
+    .property-card:hover  { transform:translateY(-6px); box-shadow:0 18px 44px rgba(0,0,0,.13); }
+    .prop-card-badge {
+      display:inline-block; padding:.28rem .9rem; border-radius:50px;
+      font-size:.68rem; font-weight:800; letter-spacing:2px;
+      text-transform:uppercase; margin-bottom:1rem;
+    }
+    .badge-private { background:#e8f5e9; color:var(--jungle-dark); }
+    .badge-hostel  { background:#e3f2fd; color:var(--ocean-dark); }
+    .prop-card-title { font-family:'Playfair Display',serif; font-size:1.45rem; color:var(--jungle-dark); margin-bottom:.25rem; }
+    .prop-card-sub   { font-size:.83rem; color:#999; margin-bottom:1.4rem; line-height:1.5; }
+    .prop-card-stats { display:flex; gap:.5rem; flex-wrap:nowrap; margin-bottom:1.4rem; }
+    .prop-stat-sm {
+      background:#f5f5f0; border-radius:12px; padding:.55rem .7rem; text-align:center; flex:1; min-width:0;
+    }
+    .prop-stat-sm .num { font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; color:var(--jungle-dark); }
+    .prop-stat-sm .lbl { font-size:.62rem; letter-spacing:1.5px; text-transform:uppercase; color:#aaa; }
+    .prop-amenity-list { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
+    .prop-amenity-item { display:flex; align-items:center; gap:.5rem; font-size:.82rem; color:#555; }
+    .prop-amenity-icon { font-size:1.05rem; flex-shrink:0; }
+
+    /* Shared amenities strip */
+    .shared-strip { background:#f8f8f3; border-radius:18px; padding:1.7rem 2rem; margin-top:.5rem; }
+    .shared-strip-label {
+      text-align:center; font-size:.7rem; letter-spacing:3px; text-transform:uppercase;
+      color:var(--jungle-mid); font-weight:700; margin-bottom:1.2rem;
+    }
+    .amenity-grid {
+      display:flex; flex-wrap:wrap; gap:.9rem; justify-content:center;
+    }
+    .amenity-item { flex:1 1 190px; max-width:230px; }
+    .amenity-item {
+      display:flex; align-items:center; gap:.8rem;
+      background:#fff; border-radius:14px; padding:.95rem 1.1rem;
+      border:1px solid rgba(0,0,0,.06); transition:background .25s,transform .25s;
+    }
+    .amenity-item:hover { background:#e8f5e9; transform:translateX(4px); }
+    .amenity-icon { font-size:1.45rem; flex-shrink:0; }
+    .amenity-text  { font-size:.88rem; color:#444; font-weight:600; }
+
+    /* ══════════════════════════════════════════════════════
+       ATTRACTION CARD IMAGES
+    ══════════════════════════════════════════════════════ */
+    .attr-img {
+      width:100%; height:170px; object-fit:cover;
+      border-radius:14px; margin-bottom:1rem; display:block;
+      background:#1a3a4a;
+    }
+    .attr-card { padding-bottom:1.6rem; }
+
+    /* ══════════════════════════════════════════════════════
+       GUEST REVIEWS
+    ══════════════════════════════════════════════════════ */
+    .reviews { background:linear-gradient(160deg,#fffef0,#fff8e0); }
+    .reviews .section-label { color:var(--sunset); }
+    .reviews .section-title { color:var(--jungle-dark); }
+    .reviews .section-desc  { color:#555; }
+    .review-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:1.8rem;
+    }
+    .review-card {
+      background:#fff; border-radius:22px; padding:2rem 1.8rem;
+      box-shadow:0 6px 28px rgba(0,0,0,.08); border-top:4px solid var(--sand);
+      transition:transform .3s,box-shadow .3s;
+    }
+    .review-card:hover { transform:translateY(-5px); box-shadow:0 14px 38px rgba(0,0,0,.12); }
+    .review-quote { font-size:3.5rem; color:var(--sand); line-height:.7; margin-bottom:.5rem; font-family:'Playfair Display',serif; }
+    .review-text  { font-size:.93rem; line-height:1.78; color:#444; font-style:italic; margin-bottom:1.2rem; }
+    .review-footer{ display:flex; align-items:center; justify-content:space-between; }
+    .review-name  { font-weight:700; color:var(--jungle-dark); font-size:.88rem; }
+    .review-origin{ font-size:.76rem; color:#999; margin-top:.1rem; }
+    .review-stars { display:flex; gap:.1rem; color:var(--gold); font-size:.85rem; }
+    .review-platform{ font-size:.7rem; color:#bbb; text-align:right; }
+    .rating-summary{
+      display:flex; align-items:center; justify-content:center; gap:2.5rem;
+      flex-wrap:wrap; background:var(--jungle-dark); border-radius:22px;
+      padding:2rem 2.5rem; margin-top:3rem; color:#fff;
+    }
+    .rating-big { font-family:'Playfair Display',serif; font-size:4rem; color:var(--sand); font-weight:700; line-height:1; }
+    .rating-stars-lg { display:flex; gap:.2rem; font-size:1.2rem; color:var(--gold); margin-top:.2rem; }
+    .rating-info h4 { font-size:1.05rem; color:#fff; margin-bottom:.2rem; }
+    .rating-info p  { font-size:.83rem; color:rgba(255,255,255,.55); }
+    .rating-bars { display:grid; gap:.5rem; min-width:200px; }
+    .rating-bar-row { display:flex; align-items:center; gap:.6rem; font-size:.76rem; color:rgba(255,255,255,.6); white-space:nowrap; }
+    .rbar-label { width:90px; }
+    .rbar-wrap   { flex:1; height:5px; background:rgba(255,255,255,.15); border-radius:50px; }
+    .rbar-fill   { height:5px; border-radius:50px; background:var(--sand); }
+    .rbar-score  { width:24px; text-align:right; }
+
+    /* ══════════════════════════════════════════════════════
+       LOCAL ATTRACTIONS
+    ══════════════════════════════════════════════════════ */
+    .attractions {
+      background:linear-gradient(160deg,#023e5a 0%,#012030 60%,#051409 100%);
+      position:relative; overflow:hidden;
+    }
+    .attractions::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 30% 50%, rgba(0,180,216,.07) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .attractions .section-label { color:var(--turquoise); }
+    .attractions .section-title { color:#fff; }
+    .attractions .section-desc  { color:rgba(255,255,255,.72); }
+    .attr-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.4rem;
+    }
+    .attr-card {
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:20px; padding:1.8rem; transition:transform .3s,background .3s;
+    }
+    .attr-card:hover { transform:translateY(-6px); background:rgba(255,255,255,.09); }
+    .attr-emoji { font-size:2.6rem; margin-bottom:.7rem; display:block; }
+    .attr-title { font-family:'Playfair Display',serif; color:#fff; font-size:1.12rem; margin-bottom:.3rem; }
+    .attr-dist  { font-size:.72rem; color:var(--turquoise); letter-spacing:2px; text-transform:uppercase; margin-bottom:.5rem; }
+    .attr-desc  { color:rgba(255,255,255,.62); font-size:.86rem; line-height:1.65; }
+
+    /* ══════════════════════════════════════════════════════
+       GETTING HERE
+    ══════════════════════════════════════════════════════ */
+    .getting-here { background:linear-gradient(160deg,#fffef0,#e8f5e9); }
+    .getting-here .section-label { color:var(--jungle-mid); }
+    .getting-here .section-title { color:var(--jungle-dark); }
+    .getting-here .section-desc  { color:#555; }
+    .transport-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:1.6rem; margin-bottom:2.5rem;
+    }
+    .transport-step {
+      background:#fff; border-radius:22px; padding:2rem 1.7rem;
+      box-shadow:0 4px 20px rgba(0,0,0,.07); border-left:5px solid var(--jungle-mid);
+      transition:transform .3s;
+    }
+    .transport-step:hover { transform:translateY(-5px); }
+    .transport-num {
+      width:34px; height:34px; border-radius:50%; background:var(--jungle-mid);
+      color:#fff; font-weight:800; font-size:.88rem;
+      display:flex; align-items:center; justify-content:center; margin-bottom:.9rem;
+    }
+    .transport-icon  { font-size:1.9rem; margin-bottom:.5rem; }
+    .transport-title { font-weight:700; color:var(--jungle-dark); font-size:.98rem; margin-bottom:.4rem; }
+    .transport-desc  { color:#666; font-size:.86rem; line-height:1.65; }
+    .transport-tip   { font-size:.76rem; color:var(--jungle-mid); font-weight:600; margin-top:.5rem; }
+    .map-cta-box {
+      background:var(--jungle-dark); border-radius:22px; padding:2.5rem;
+      text-align:center; color:#fff;
+      display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center; justify-content:center;
+    }
+    .map-cta-box h3 { font-family:'Playfair Display',serif; font-size:1.45rem; color:var(--sand); margin-bottom:.4rem; }
+    .map-cta-box p  { color:rgba(255,255,255,.65); font-size:.88rem; max-width:380px; }
+    .map-btns { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; }
+    .btn-map {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.82rem 1.7rem; border-radius:50px;
+      font-weight:700; font-size:.86rem; text-decoration:none;
+      transition:transform .25s,box-shadow .25s;
+    }
+    .btn-map.gmap { background:linear-gradient(135deg,#4CAF50,#2e7d32); color:#fff; box-shadow:0 3px 14px rgba(76,175,80,.35); }
+    .btn-map.wapp { background:linear-gradient(135deg,#25d366,#128c7e); color:#fff; box-shadow:0 3px 14px rgba(37,211,102,.35); }
+    .btn-map:hover { transform:translateY(-3px); }
+
+    /* ══════════════════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+    ══════════════════════════════════════════════════════ */
+    .wa-float {
+      position: fixed; bottom: 1.6rem; right: 1.6rem; z-index: 200;
+      display: flex; align-items: center; gap: .6rem;
+      background: #25d366; color: #fff;
+      padding: .75rem 1.3rem .75rem 1rem;
+      border-radius: 50px; text-decoration: none;
+      font-family: 'Raleway', sans-serif; font-weight: 700; font-size: .85rem;
+      box-shadow: 0 4px 22px rgba(37,211,102,.45);
+      transition: transform .25s, box-shadow .25s;
+      animation: waPulse 3s ease-in-out infinite;
+    }
+    .wa-float:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 8px 32px rgba(37,211,102,.6);
+      animation: none;
+    }
+    .wa-float svg { flex-shrink: 0; }
+    .wa-float-label { white-space: nowrap; }
+    @media(max-width:480px) {
+      .wa-float { padding: .75rem; border-radius: 50%; }
+      .wa-float-label { display: none; }
+    }
+    @keyframes waPulse {
+      0%,100% { box-shadow: 0 4px 22px rgba(37,211,102,.45); }
+      50%      { box-shadow: 0 4px 32px rgba(37,211,102,.7), 0 0 0 8px rgba(37,211,102,.12); }
+    }
+
+    /* ══════════════════════════════════════════════════════
+       NAV ACTIVE STATE (scroll-spy)
+    ══════════════════════════════════════════════════════ */
+    .nav-links a.active {
+      color: var(--sand) !important;
+      position: relative;
+    }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 2px; background: var(--sand); border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     STICKY NAV
+══════════════════════════════════════════════════════ -->
+<nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+  <a href="#" class="nav-brand">🐺 <span>Family Wolf</span></a>
+  <div class="nav-links">
+    <a href="#experience" class="hide-mob">Experiencia</a>
+    <a href="#amenities" class="hide-mob">Comodidades</a>
+    <a href="#wildlife"  class="hide-mob">Fauna</a>
+    <a href="#reviews"   class="hide-mob">Reseñas</a>
+    <a href="#atracciones" class="hide-mob">Explorar</a>
+    <a href="#reservar" class="nav-cta">Reservar</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════ -->
+<section class="hero">
+
+  <!-- Sunset light shafts -->
+  <div class="light-rays" aria-hidden="true">
+    <div class="ray"></div><div class="ray"></div><div class="ray"></div>
+    <div class="ray"></div><div class="ray"></div>
+  </div>
+
+  <!-- Atmospheric depth haze -->
+  <div class="hero-haze" aria-hidden="true"></div>
+
+  <!-- ═══ BEACH OCEAN SCENE (provided by Beach.jpg background) ═══ -->
+  <svg class="beach-ocean" style="display:none;" viewBox="0 0 1440 480" aria-hidden="true">
+    <defs>
+      <linearGradient id="oceanGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#e8762a" stop-opacity=".55"/>
+        <stop offset="18%"  stop-color="#c45520" stop-opacity=".5"/>
+        <stop offset="38%"  stop-color="#1a6888" stop-opacity=".88"/>
+        <stop offset="65%"  stop-color="#0d4d6e" stop-opacity=".96"/>
+        <stop offset="100%" stop-color="#082d44" stop-opacity="1"/>
+      </linearGradient>
+      <linearGradient id="sunColRefl" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"   stop-color="rgba(255,185,35,0)"/>
+        <stop offset="38%"  stop-color="rgba(255,185,35,.06)"/>
+        <stop offset="50%"  stop-color="rgba(255,210,60,.32)"/>
+        <stop offset="62%"  stop-color="rgba(255,185,35,.06)"/>
+        <stop offset="100%" stop-color="rgba(255,185,35,0)"/>
+      </linearGradient>
+      <linearGradient id="wetSandGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#8da898"/>
+        <stop offset="50%"  stop-color="#a09070"/>
+        <stop offset="100%" stop-color="#b89860"/>
+      </linearGradient>
+      <linearGradient id="drySandGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%"   stop-color="#c9a870"/>
+        <stop offset="40%"  stop-color="#d8be90"/>
+        <stop offset="100%" stop-color="#e2c898"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Ocean body -->
+    <rect x="0" y="0" width="1440" height="480" fill="url(#oceanGrad)"/>
+
+    <!-- Sun reflection column -->
+    <path d="M 640,0 L 800,0 L 765,390 L 675,390 Z" fill="url(#sunColRefl)"/>
+    <!-- Horizon glow line -->
+    <rect x="0" y="148" width="1440" height="2" fill="rgba(255,195,70,.3)"/>
+
+    <!-- Distant wave lines (upper ocean) -->
+    <path d="M0,182 Q180,174 360,182 Q540,190 720,178 Q900,166 1080,176 Q1260,186 1440,174" stroke="rgba(255,200,100,.18)" stroke-width="2" fill="none"/>
+    <path d="M0,215 Q200,205 400,215 Q600,225 720,210 Q840,196 1040,210 Q1240,224 1440,212" stroke="rgba(255,200,100,.13)" stroke-width="1.6" fill="none"/>
+    <path d="M0,250 Q180,238 360,250 Q540,262 720,246 Q900,230 1120,245 Q1300,258 1440,248" stroke="rgba(200,230,255,.2)" stroke-width="1.6" fill="none"/>
+    <path d="M0,282 Q240,270 480,282 Q720,294 960,276 Q1200,260 1440,274" stroke="rgba(200,230,255,.16)" stroke-width="1.4" fill="none"/>
+    <path d="M0,315 Q300,303 600,315 Q900,327 1200,312 Q1340,307 1440,312" stroke="rgba(180,220,255,.14)" stroke-width="1.2" fill="none"/>
+
+    <!-- Wave crest foam highlights -->
+    <path d="M90,255 Q130,251 175,255"  stroke="rgba(255,255,255,.25)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M480,268 Q540,263 605,268"  stroke="rgba(255,255,255,.22)" stroke-width="2"   fill="none" stroke-linecap="round"/>
+    <path d="M860,252 Q930,247 998,252"  stroke="rgba(255,255,255,.22)" stroke-width="2"   fill="none" stroke-linecap="round"/>
+    <path d="M1230,264 Q1295,259 1355,264" stroke="rgba(255,255,255,.18)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Second row of crests -->
+    <path d="M220,288 Q275,283 330,288" stroke="rgba(255,255,255,.2)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M680,296 Q750,290 810,296" stroke="rgba(255,255,255,.2)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M1060,282 Q1130,276 1185,282" stroke="rgba(255,255,255,.17)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Shore-break wave -->
+    <path d="M0,348 Q120,334 240,346 Q360,358 480,342 Q600,326 720,340 Q840,354 960,338 Q1080,322 1200,336 Q1320,350 1440,338 L1440,480 L0,480 Z" fill="#0d4d6e" opacity=".92"/>
+    <path d="M0,353 Q120,339 240,351 Q360,363 480,347 Q600,331 720,345 Q840,359 960,343 Q1080,327 1200,341 Q1320,355 1440,343" stroke="rgba(255,255,255,.4)" stroke-width="2.8" fill="none"/>
+
+    <!-- Wet sand / surf zone -->
+    <path d="M0,375 Q200,363 400,372 Q600,381 720,368 Q840,356 1040,370 Q1240,384 1440,372 L1440,480 L0,480 Z" fill="url(#wetSandGrad)" opacity=".85"/>
+    <!-- Wet sand sheen (sunset reflection on wet sand) -->
+    <path d="M 600,380 L 840,380 L 830,480 L 610,480 Z" fill="rgba(255,165,30,.12)"/>
+
+    <!-- Dry beach sand -->
+    <path d="M0,408 Q360,396 720,402 Q1080,408 1440,398 L1440,480 L0,480 Z" fill="url(#drySandGrad)"/>
+
+    <!-- Small pebbles & shells on beach -->
+    <ellipse cx="180"  cy="422" rx="5"   ry="2.2" fill="#c0a880" opacity=".75"/>
+    <ellipse cx="420"  cy="416" rx="3.5" ry="1.6" fill="#b09870" opacity=".65"/>
+    <ellipse cx="680"  cy="428" rx="6"   ry="2.5" fill="#cdb890" opacity=".7"/>
+    <ellipse cx="950"  cy="420" rx="4"   ry="1.8" fill="#b8a678" opacity=".68"/>
+    <ellipse cx="1180" cy="425" rx="4.5" ry="2"   fill="#c0a880" opacity=".72"/>
+    <ellipse cx="1360" cy="418" rx="3"   ry="1.4" fill="#b0986e" opacity=".6"/>
+    <!-- Shells -->
+    <path d="M 310,430 Q 318,424 326,430 Q 318,436 310,430Z" fill="#d8c8a8" opacity=".7"/>
+    <path d="M 790,419 Q 797,413 804,419 Q 797,425 790,419Z" fill="#d0c098" opacity=".65"/>
+    <path d="M 1080,432 Q 1088,426 1096,432 Q 1088,438 1080,432Z" fill="#d8c8a8" opacity=".68"/>
+  </svg>
+
+
+  <!-- Guacamayos / Lapas Rojas (Ara macao) volando — chroma key -->
+  <div class="bird-lane" aria-hidden="true">
+
+    <!-- Hidden source video – single instance shared by both canvases -->
+    <video id="parrotSrc" autoplay muted loop playsinline preload="auto" style="display:none;">
+      <source src="275509669.webm" type="video/webm">
+    </video>
+
+    <!-- Canvas 1 – primer plano, más grande (delay -5s → ~16% from left) -->
+    <canvas class="macaw" id="parrot1"
+            style="top:10%;width:340px;animation-duration:18s;animation-delay:-5s;"></canvas>
+
+    <!-- Canvas 2 – plano medio, más lejos (delay -14s → ~50% from left) -->
+    <canvas class="macaw" id="parrot2"
+            style="top:32%;width:210px;animation-duration:26s;animation-delay:-14s;opacity:.82;"></canvas>
+
+  </div>
+
+  <script>
+    (function () {
+      var video    = document.getElementById('parrotSrc');
+      var canvases = [document.getElementById('parrot1'), document.getElementById('parrot2')];
+      var ctxs     = canvases.map(function (c) {
+        return c.getContext('2d', { willReadFrequently: true });
+      });
+
+      function drawFrame() {
+        if (video.readyState < 2) { requestAnimationFrame(drawFrame); return; }
+        var w = video.videoWidth, h = video.videoHeight;
+        if (!w || !h)             { requestAnimationFrame(drawFrame); return; }
+
+        ctxs.forEach(function (ctx, i) {
+          var canvas = canvases[i];
+          if (canvas.width !== w)  canvas.width  = w;
+          if (canvas.height !== h) canvas.height = h;
+
+          ctx.drawImage(video, 0, 0, w, h);
+
+          var img = ctx.getImageData(0, 0, w, h);
+          var d   = img.data;
+          for (var j = 0; j < d.length; j += 4) {
+            var r = d[j], g = d[j + 1], b = d[j + 2];
+            // Chroma-key: erase green-screen pixels
+            if (g > 80 && g > r * 1.35 && g > b * 1.35) d[j + 3] = 0;
+          }
+          ctx.putImageData(img, 0, 0);
+        });
+
+        requestAnimationFrame(drawFrame);
+      }
+
+      video.addEventListener('play', drawFrame);
+      video.play().catch(function () {});
+    })();
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════
+       FAMILY WOLF LOGO
+  ═══════════════════════════════════════════════════ -->
+  <div class="hero-logo">
+    <img src="logohostal.jpg" alt="Family Wolf Hostel logo"
+         style="width:clamp(180px,28vw,260px);height:clamp(180px,28vw,260px);border-radius:50%;object-fit:cover;object-position:center;display:block;"/>
+  </div>
+
+    <!-- ── Hero text ── -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">🌴 Paquera · Puntarenas · Costa Rica 🌴</p>
+    <h1 class="hero-title">Family <em>Wolf</em></h1>
+    <p class="hero-sub">El Chorro Home — Vistas al lago &amp; naturaleza viva</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-top:.9rem;">
+      <a class="hero-loc" href="https://www.google.com/maps/search/?api=1&query=9.8195985,-84.9339724" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        Paquera, Puntarenas
+      </a>
+      <span class="badge-pv">Pura Vida</span>
+    </div>
+    <div style="margin-top:.6rem;text-align:center;">
+      <a href="https://wa.me/50661235061"
+         target="_blank" rel="noopener noreferrer"
+         style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(37,211,102,.18);border:1px solid rgba(37,211,102,.45);color:#ffffff;font-size:.83rem;letter-spacing:1.5px;font-weight:600;text-decoration:none;padding:.38rem .95rem;border-radius:50px;transition:background .25s,transform .2s;text-shadow:0 1px 4px rgba(0,0,0,.8);"
+         onmouseover="this.style.background='rgba(37,211,102,.32)';this.style.transform='translateY(-2px)'"
+         onmouseout="this.style.background='rgba(37,211,102,.18)';this.style.transform='translateY(0)'">
+        <!-- WhatsApp icon -->
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#25d366">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        +506 61235061
+      </a>
+    </div>
+    <div class="hero-btns">
+      <a href="https://www.airbnb.es/rooms/1594175512173747674"
+         target="_blank" rel="noopener noreferrer" class="btn btn-airbnb">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="white">
+          <path d="M16 1.5C9.1 1.5 4 7.5 4 14c0 9.3 12 20.5 12 20.5S28 23.3 28 14c0-6.5-5.1-12.5-12-12.5zm0 17a4.5 4.5 0 110-9 4.5 4.5 0 010 9z"/>
+        </svg>
+        Reservar en Airbnb
+      </a>
+      <a href="https://www.booking.com/hotel/cr/lodge-el-chorro.es.html?aid=2311236&label=es-es-booking-desktop-onknyt5TBrS8m9RnGd%2A6fgS652829001115%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9047034%3Ali%3Adec%3Adm&sid=d91fb12f30cbfdbdac4f2798bbcaf27b"
+         target="_blank" rel="noopener noreferrer" class="btn btn-booking">
+        <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+          <rect width="40" height="40" rx="7" fill="#0071c2"/>
+          <text x="20" y="27" text-anchor="middle" font-size="17" font-weight="900" font-family="Arial,sans-serif" fill="white">B.</text>
+        </svg>
+        Reservar en Booking
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-cue" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">
+    Descubre más
+    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+
+</section>
+
+<!-- Wave to cream -->
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#041e30;" height="80">
+  <path fill="#fffef0" d="M0,90L80,72C160,54,320,18,480,18C640,18,800,54,960,63C1120,72,1280,54,1360,45L1440,36L1440,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════════════════════ -->
+<section class="section experience" id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">✦ La Experiencia ✦</p>
+      <h2 class="section-title">Despierta entre la Naturaleza</h2>
+      <p class="section-desc">Abre los ojos y escucha el canto de las lapas. Monos juguetones en los árboles, iguanas tomando el sol y vistas al lago que quitan el aliento. Eso es cada mañana en Family Wolf.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon">🌊</div><h3 class="feat-title">Vistas al Lago</h3><p class="feat-desc">Disfruta el café de la mañana con vistas panorámicas al lago, rodeado del canto de la naturaleza.</p></div>
+      <div class="feat-card"><div class="feat-icon">🏡</div><h3 class="feat-title">Casa Contenedor</h3><p class="feat-desc">Alojamiento único en contenedor marítimo con diseño moderno y todo el confort que necesitas.</p></div>
+      <div class="feat-card"><div class="feat-icon">🦜</div><h3 class="feat-title">Fauna Silvestre</h3><p class="feat-desc">Monos, iguanas, lapas y aves exóticas son tus vecinos diarios en plena selva tropical costarricense.</p></div>
+      <div class="feat-card"><div class="feat-icon">🌴</div><h3 class="feat-title">Auténtico Pura Vida</h3><p class="feat-desc">Paquera, Puntarenas — el corazón verde de Costa Rica. Lejos del ruido, cerca de todo lo que importa.</p></div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#fffef0;" height="80">
+  <path fill="#fff" d="M0,90L80,72C160,54,320,18,480,18C640,18,800,54,960,63C1120,72,1280,54,1360,45L1440,36L1440,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     AMENITIES / PROPERTY DETAILS
+══════════════════════════════════════════════════════ -->
+<section class="section amenities" id="amenities">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">🏠 La Propiedad</p>
+      <h2 class="section-title">Elige Tu Alojamiento</h2>
+      <p class="section-desc">Dos opciones únicas en contenedor marítimo — una casa privada para familias o parejas, y un hostal para viajeros con espíritu aventurero.</p>
+    </div>
+
+    <!-- Dual property cards -->
+    <div class="property-grid">
+
+      <!-- Property 1: Casa Privada -->
+      <div class="property-card">
+        <span class="prop-card-badge badge-private">🏡 Casa Privada</span>
+        <h3 class="prop-card-title">El Chorro Home</h3>
+        <p class="prop-card-sub">Contenedor marítimo privado · Vista al lago · Ideal para familias y parejas</p>
+        <div class="prop-card-stats">
+          <div class="prop-stat-sm"><div class="num">3</div><div class="lbl">Huéspedes</div></div>
+          <div class="prop-stat-sm"><div class="num">1</div><div class="lbl">Dormitorio</div></div>
+          <div class="prop-stat-sm"><div class="num">1</div><div class="lbl">Baño privado</div></div>
+          <div class="prop-stat-sm"><div class="num">⭐4.9</div><div class="lbl">Rating</div></div>
+        </div>
+        <div class="prop-amenity-list">
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">📶</span>WiFi incluido</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🍳</span>Cocina equipada</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🚿</span>Baño privado</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🌊</span>Vista al lago</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🅿️</span>Estacionamiento</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🌿</span>Jardín privado</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🔒</span>Check-in flexible</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">💬</span>Host 24/7</div>
+        </div>
+      </div>
+
+      <!-- Property 2: Hostal -->
+      <div class="property-card hostel">
+        <span class="prop-card-badge badge-hostel">🛏️ Hostal</span>
+        <h3 class="prop-card-title">Hostal Wolf</h3>
+        <p class="prop-card-sub">Contenedor hostal estilo mochilero · Perfecto para grupos y viajeros sociales</p>
+        <div class="prop-card-stats">
+          <div class="prop-stat-sm"><div class="num">6</div><div class="lbl">Huéspedes</div></div>
+          <div class="prop-stat-sm"><div class="num">3</div><div class="lbl">Camarotes</div></div>
+          <div class="prop-stat-sm"><div class="num">1</div><div class="lbl">Baño compartido</div></div>
+          <div class="prop-stat-sm"><div class="num">⭐4.9</div><div class="lbl">Rating</div></div>
+        </div>
+        <div class="prop-amenity-list">
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">📶</span>WiFi incluido</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🛏️</span>3 literas dobles</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🚿</span>Baño compartido</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🌊</span>Vista al lago</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🅿️</span>Estacionamiento</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🌿</span>Área común exterior</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">🔒</span>Casilleros</div>
+          <div class="prop-amenity-item"><span class="prop-amenity-icon">💬</span>Host 24/7</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shared amenities -->
+    <div class="shared-strip">
+      <p class="shared-strip-label">✦ Incluido en ambas opciones ✦</p>
+      <div class="amenity-grid">
+        <div class="amenity-item"><span class="amenity-icon">🦜</span><span class="amenity-text">Observación de fauna silvestre</span></div>
+        <div class="amenity-item"><span class="amenity-icon">☕</span><span class="amenity-text">Zona de desayuno al aire libre</span></div>
+        <div class="amenity-item"><span class="amenity-icon">🌙</span><span class="amenity-text">Entorno tranquilo y privado</span></div>
+        <div class="amenity-item"><span class="amenity-icon">📍</span><span class="amenity-text">Ubicación única en El Chorro</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#fff;" height="80">
+  <path fill="#051409" d="M0,0L80,18C160,36,320,72,480,72C640,72,800,36,960,18C1120,0,1280,36,1360,54L1440,72L1440,90L0,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     WILDLIFE
+══════════════════════════════════════════════════════ -->
+<section class="section wildlife" id="wildlife">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">🌿 Fauna Local 🌿</p>
+      <h2 class="section-title">Tus Vecinos en la Selva</h2>
+      <p class="section-desc">En Family Wolf la vida silvestre de Costa Rica se convierte en parte de tu experiencia diaria. No los busques en un zoológico — ellos vendrán a ti.</p>
+    </div>
+    <div class="wl-grid">
+      <!-- LAPA -->
+      <div class="wl-card lapa">
+        <svg class="wl-emoji" viewBox="0 0 100 100" style="font-size:unset;width:90px;height:90px;margin:0 auto .8rem;">
+          <ellipse cx="45" cy="58" rx="22" ry="13" fill="#c62828"/>
+          <path d="M28 58 Q42 30 65 36 Q52 52 28 58Z" fill="#1565c0"/>
+          <path d="M34 56 Q44 42 60 44 Q50 54 34 56Z" fill="#f9a825"/>
+          <path d="M28 58 Q42 74 65 68 Q52 62 28 58Z" fill="#2e7d32"/>
+          <circle cx="66" cy="55" r="13" fill="#c62828"/>
+          <ellipse cx="68" cy="56" rx="6" ry="5" fill="#fff9c4"/>
+          <path d="M77 52 Q88 50 85 56 Q82 58 77 57Z" fill="#37474f"/>
+          <path d="M77 57 Q84 59 82 63 Q78 62 77 57Z" fill="#455a64"/>
+          <circle cx="65" cy="51" r="3.5" fill="#1a1a1a"/>
+          <circle cx="66.3" cy="50" r="1.2" fill="white"/>
+          <path d="M24 58 Q8 48 0 38"  stroke="#1565c0" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M24 58 Q8 56 0 55"  stroke="#f9a825" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M24 58 Q8 65 0 72"  stroke="#c62828" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <line x1="42" y1="70" x2="36" y2="80" stroke="#555" stroke-width="2"/>
+          <line x1="48" y1="71" x2="48" y2="82" stroke="#555" stroke-width="2"/>
+        </svg>
+        <h3 class="wl-name">Lapas Rojas</h3>
+        <p class="wl-latin">Ara macao</p>
+        <p class="wl-desc">El ícono más colorido de Costa Rica. Las lapas rojas sobrevuelan la propiedad cada mañana, llenando el cielo de color y su inconfundible llamado.</p>
+      </div>
+      <!-- MONO -->
+      <div class="wl-card mono">
+        <svg class="wl-emoji" viewBox="0 0 100 100" style="font-size:unset;width:90px;height:90px;margin:0 auto .8rem;">
+          <path d="M5 30 Q30 20 60 25 Q80 28 95 22" stroke="#5d4037" stroke-width="6" stroke-linecap="round" fill="none"/>
+          <line x1="38" y1="25" x2="38" y2="42" stroke="#8d6e63" stroke-width="5" stroke-linecap="round"/>
+          <line x1="58" y1="25" x2="58" y2="42" stroke="#8d6e63" stroke-width="5" stroke-linecap="round"/>
+          <ellipse cx="48" cy="62" rx="18" ry="20" fill="#6d4c41"/>
+          <ellipse cx="48" cy="66" rx="11" ry="14" fill="#a1887f"/>
+          <circle cx="48" cy="42" r="18" fill="#6d4c41"/>
+          <ellipse cx="48" cy="44" rx="12" ry="10" fill="#ffe0b2"/>
+          <circle cx="31" cy="41" r="7" fill="#6d4c41"/><circle cx="31" cy="41" r="4" fill="#a1887f"/>
+          <circle cx="65" cy="41" r="7" fill="#6d4c41"/><circle cx="65" cy="41" r="4" fill="#a1887f"/>
+          <circle cx="42" cy="40" r="4" fill="#1a1a1a"/><circle cx="54" cy="40" r="4" fill="#1a1a1a"/>
+          <circle cx="43.5" cy="38.5" r="1.4" fill="white"/><circle cx="55.5" cy="38.5" r="1.4" fill="white"/>
+          <ellipse cx="48" cy="47" rx="4" ry="2.5" fill="#5d4037"/>
+          <circle cx="46" cy="47" r="1.2" fill="#3e2723"/><circle cx="50" cy="47" r="1.2" fill="#3e2723"/>
+          <path d="M43 51 Q48 55 53 51" stroke="#5d4037" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M48 82 Q30 90 20 75 Q15 65 28 62" stroke="#5d4037" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <circle cx="38" cy="24" r="5" fill="#5d4037"/>
+          <circle cx="58" cy="24" r="5" fill="#5d4037"/>
+        </svg>
+        <h3 class="wl-name">Monos Carablanca</h3>
+        <p class="wl-latin">Cebus capucinus</p>
+        <p class="wl-desc">Los monos carablanca habitan los árboles alrededor. Con suerte, los verás saltar de rama en rama al despertar — curiosos e inteligentes, te observarán tanto como tú a ellos.</p>
+      </div>
+      <!-- IGUANA -->
+      <div class="wl-card iguana">
+        <svg class="wl-emoji" viewBox="0 0 100 100" style="font-size:unset;width:90px;height:90px;margin:0 auto .8rem;">
+          <ellipse cx="50" cy="90" rx="38" ry="10" fill="#78909c" opacity=".5"/>
+          <path d="M75 65 Q88 70 95 60 Q100 50 90 45 Q83 42 80 50" stroke="#388e3c" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <ellipse cx="52" cy="68" rx="28" ry="14" fill="#388e3c"/>
+          <path d="M35 62 Q52 58 70 62" stroke="#2e7d32" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+          <path d="M30 68 Q52 64 74 68" stroke="#2e7d32" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+          <path d="M35 74 Q52 70 70 74" stroke="#2e7d32" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+          <path d="M38 57 L36 47" stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M46 55 L44 44" stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M54 55 L52 43" stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M62 56 L61 46" stroke="#1b5e20" stroke-width="2.5" stroke-linecap="round"/>
+          <ellipse cx="28" cy="66" rx="16" ry="11" fill="#43a047"/>
+          <ellipse cx="25" cy="71" rx="12" ry="6"  fill="#388e3c"/>
+          <circle cx="22" cy="62" r="5" fill="#1a1a1a"/>
+          <circle cx="23" cy="61" r="1.8" fill="white"/>
+          <circle cx="15" cy="67" r="1.5" fill="#2e7d32"/>
+          <path d="M24 73 Q28 82 22 85" stroke="#f57f17" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M40 80 Q38 88 32 92" stroke="#2e7d32" stroke-width="5" stroke-linecap="round"/>
+          <path d="M58 80 Q62 88 68 92" stroke="#2e7d32" stroke-width="5" stroke-linecap="round"/>
+          <line x1="32" y1="92" x2="26" y2="95" stroke="#1b5e20" stroke-width="2"/>
+          <line x1="32" y1="92" x2="30" y2="97" stroke="#1b5e20" stroke-width="2"/>
+          <line x1="32" y1="92" x2="36" y2="96" stroke="#1b5e20" stroke-width="2"/>
+          <line x1="68" y1="92" x2="62" y2="95" stroke="#1b5e20" stroke-width="2"/>
+          <line x1="68" y1="92" x2="68" y2="97" stroke="#1b5e20" stroke-width="2"/>
+          <line x1="68" y1="92" x2="74" y2="95" stroke="#1b5e20" stroke-width="2"/>
+        </svg>
+        <h3 class="wl-name">Iguanas Verdes</h3>
+        <p class="wl-latin">Iguana iguana</p>
+        <p class="wl-desc">Criaturas antiguas y majestuosas, las iguanas verdes toman el sol en rocas y ramas. Pacíficas y casi prehistóricas, comparten el espacio con total tranquilidad.</p>
+      </div>
+    </div>
+
+    <div class="wl-art-strip" aria-hidden="true">
+      <svg width="80"  height="90"  viewBox="0 0 80 90"  fill="none"><path d="M40 85 Q10 60 15 30 Q20 10 40 5 Q60 10 65 30 Q70 60 40 85Z" fill="#2e7d32" opacity=".7"/><path d="M40 85 Q40 50 40 5" stroke="#1b5e20" stroke-width="2" fill="none"/><path d="M40 40 Q25 35 15 30" stroke="#1b5e20" stroke-width="1.5" fill="none" opacity=".6"/><path d="M40 55 Q55 45 65 40" stroke="#1b5e20" stroke-width="1.5" fill="none" opacity=".6"/></svg>
+      <svg width="55"  height="65"  viewBox="0 0 60 70"  fill="none"><path d="M30 65 Q5 45 10 20 Q15 5 30 2 Q45 5 50 20 Q55 45 30 65Z" fill="#388e3c" opacity=".6"/><path d="M30 65 Q30 35 30 2" stroke="#2e7d32" stroke-width="1.8" fill="none"/></svg>
+      <svg width="90"  height="110" viewBox="0 0 90 110" fill="none"><path d="M45 105 Q10 75 15 40 Q20 10 45 5 Q70 10 75 40 Q80 75 45 105Z" fill="#1b5e20" opacity=".65"/><path d="M45 105 Q45 60 45 5" stroke="#145214" stroke-width="2.2" fill="none"/><path d="M45 45 Q30 38 15 40" stroke="#145214" stroke-width="1.5" fill="none" opacity=".5"/><path d="M45 65 Q62 55 75 55" stroke="#145214" stroke-width="1.5" fill="none" opacity=".5"/></svg>
+      <svg width="55"  height="65"  viewBox="0 0 60 70"  fill="none"><path d="M30 65 Q5 45 10 20 Q15 5 30 2 Q45 5 50 20 Q55 45 30 65Z" fill="#43a047" opacity=".55"/><path d="M30 65 Q30 35 30 2" stroke="#2e7d32" stroke-width="1.8" fill="none"/></svg>
+      <svg width="70"  height="85"  viewBox="0 0 70 85"  fill="none"><path d="M35 80 Q8 58 12 30 Q16 8 35 3 Q54 8 58 30 Q62 58 35 80Z" fill="#2e7d32" opacity=".6"/><path d="M35 80 Q35 45 35 3" stroke="#1b5e20" stroke-width="2" fill="none"/></svg>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#062014;" height="80">
+  <path fill="#fffef0" d="M0,90L80,72C160,54,320,18,480,18C640,18,800,54,960,63C1120,72,1280,54,1360,45L1440,36L1440,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     GUEST REVIEWS
+══════════════════════════════════════════════════════ -->
+<section class="section reviews" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">⭐ Reseñas de Huéspedes ⭐</p>
+      <h2 class="section-title">Lo que Dicen Nuestros Visitantes</h2>
+      <p class="section-desc">Cada huésped trae su propia historia. Estas son algunas de las experiencias compartidas por quienes ya vivieron la magia de Family Wolf.</p>
+    </div>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-quote">"</div>
+        <p class="review-text">Un lugar verdaderamente mágico. Despertar con el sonido de las lapas y ver monos desde la ventana fue una experiencia que no olvidaré. La casa es única y muy cómoda. ¡Definitivamente regreso!</p>
+        <div class="review-footer">
+          <div class="review-author">
+            <div class="review-name">María G.</div>
+            <div class="review-origin">San José, Costa Rica</div>
+          </div>
+          <div>
+            <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="review-platform">Airbnb · 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote">"</div>
+        <p class="review-text">Incredible experience! The container house is beautiful and the lake views are breathtaking. We saw macaws every single morning. The host was super responsive and gave great local tips.</p>
+        <div class="review-footer">
+          <div class="review-author">
+            <div class="review-name">James &amp; Laura T.</div>
+            <div class="review-origin">Toronto, Canada</div>
+          </div>
+          <div>
+            <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="review-platform">Airbnb · 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote">"</div>
+        <p class="review-text">El lugar superó todas mis expectativas. La tranquilidad, la naturaleza y las vistas hacen de este sitio un paraíso. El anfitrión fue muy atento y nos dio excelentes recomendaciones de la zona.</p>
+        <div class="review-footer">
+          <div class="review-author">
+            <div class="review-name">Alejandro R.</div>
+            <div class="review-origin">Bogotá, Colombia</div>
+          </div>
+          <div>
+            <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <div class="review-platform">Booking.com · 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating summary bar -->
+    <div class="rating-summary">
+      <div style="text-align:center;">
+        <div class="rating-big">4.9</div>
+        <div class="rating-stars-lg">★★★★★</div>
+      </div>
+      <div class="rating-info">
+        <h4>Calificación excepcional</h4>
+        <p>Basado en reseñas verificadas de Airbnb &amp; Booking.com</p>
+      </div>
+      <div class="rating-bars">
+        <div class="rating-bar-row"><span class="rbar-label">Limpieza</span><div class="rbar-wrap"><div class="rbar-fill" style="width:98%"></div></div><span class="rbar-score">5.0</span></div>
+        <div class="rating-bar-row"><span class="rbar-label">Comunicación</span><div class="rbar-wrap"><div class="rbar-fill" style="width:96%"></div></div><span class="rbar-score">4.8</span></div>
+        <div class="rating-bar-row"><span class="rbar-label">Ubicación</span><div class="rbar-wrap"><div class="rbar-fill" style="width:100%"></div></div><span class="rbar-score">5.0</span></div>
+        <div class="rating-bar-row"><span class="rbar-label">Valor</span><div class="rbar-wrap"><div class="rbar-fill" style="width:94%"></div></div><span class="rbar-score">4.7</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#fffef0;" height="80">
+  <path fill="#023e5a" d="M0,0L80,18C160,36,320,72,480,72C640,72,800,36,960,18C1120,0,1280,36,1360,54L1440,72L1440,90L0,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     LOCAL ATTRACTIONS
+══════════════════════════════════════════════════════ -->
+<section class="section attractions" id="atracciones">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">🗺️ Descubre la Región 🗺️</p>
+      <h2 class="section-title">Qué Hacer en Paquera</h2>
+      <p class="section-desc">La Península de Nicoya es una joya inexplorada. Desde Family Wolf tienes acceso a playas vírgenes, reservas naturales y aventuras únicas.</p>
+    </div>
+    <div class="attr-grid">
+
+      <!-- Ferry -->
+      <div class="attr-card">
+        <img class="attr-img"
+             src="https://images.pexels.com/photos/34305114/pexels-photo-34305114.jpeg?auto=compress&cs=tinysrgb&w=800"
+             alt="Vista aérea del ferry hacia Paquera" loading="lazy"
+             onerror="this.style.display='none'"/>
+        <h3 class="attr-title">⛴️ Ferry a Paquera</h3>
+        <div class="attr-dist">Salidas desde Puntarenas · ~1.5h</div>
+        <p class="attr-desc">El ferry Naviera Tambor cruza el Golfo de Nicoya con vistas increíbles. Desde Paquera hay conexión a Montezuma, Tambor y Santa Teresa.</p>
+      </div>
+
+      <!-- Playa Tambor -->
+      <div class="attr-card">
+        <img class="attr-img"
+             src="https://commons.wikimedia.org/wiki/Special:FilePath/Playa_Tambor._Costa_Rica_(7).jpg"
+             alt="Playa Tambor, Costa Rica" loading="lazy"
+             onerror="this.style.display='none'"/>
+        <h3 class="attr-title">🌊 Playa Tambor</h3>
+        <div class="attr-dist">~20 min en auto</div>
+        <p class="attr-desc">Una de las bahías más tranquilas de la Península. Aguas calmadas ideales para nadar, kayak y avistamiento de delfines al atardecer.</p>
+      </div>
+
+      <!-- Reserva Curú -->
+      <div class="attr-card">
+        <img class="attr-img"
+             src="https://images.pexels.com/photos/67395/pexels-photo-67395.jpeg?auto=compress&cs=tinysrgb&w=800"
+             alt="Selva tropical en Costa Rica — Reserva Curú" loading="lazy"
+             onerror="this.style.display='none'"/>
+        <h3 class="attr-title">🌿 Refugio Curú</h3>
+        <div class="attr-dist">~15 min en auto · Entrada con guía</div>
+        <p class="attr-desc">Primera reserva privada de Costa Rica. Con 232 especies de aves, monos, tortugas y 5 tipos de hábitat — playa, manglar y bosque tropical.</p>
+      </div>
+
+      <!-- Playa Naranjo / Paquera -->
+      <div class="attr-card">
+        <img class="attr-img"
+             src="https://commons.wikimedia.org/wiki/Special:FilePath/Playa_%C3%93rganos._Paquera._Costa_Rica.jpg"
+             alt="Playa Órganos, Paquera, Costa Rica" loading="lazy"
+             onerror="this.style.display='none'"/>
+        <h3 class="attr-title">🏄 Playas de Paquera</h3>
+        <div class="attr-dist">~10–30 min en auto</div>
+        <p class="attr-desc">Playas poco concurridas rodeadas de naturaleza. Aguas tranquilas, arena blanca y el ambiente auténtico del Golfo de Nicoya.</p>
+      </div>
+
+      <!-- Kayak -->
+      <div class="attr-card">
+        <img class="attr-img"
+             src="https://images.pexels.com/photos/3230581/pexels-photo-3230581.jpeg?auto=compress&cs=tinysrgb&w=800"
+             alt="Kayak en lago tranquilo" loading="lazy"
+             onerror="this.style.display='none'"/>
+        <h3 class="attr-title">🚣 Kayak en el Lago</h3>
+        <div class="attr-dist">Desde la propiedad</div>
+        <p class="attr-desc">Sal a remar al amanecer con vistas a la montaña. Condiciones perfectas para kayak y observación de aves acuáticas sin salir de casa.</p>
+      </div>
+
+      <!-- Fauna -->
+      <div class="attr-card">
+        <img class="attr-img"
+             src="https://images.pexels.com/photos/27400861/pexels-photo-27400861.jpeg?auto=compress&cs=tinysrgb&w=800"
+             alt="Fauna silvestre en Costa Rica" loading="lazy"
+             onerror="this.style.display='none'"/>
+        <h3 class="attr-title">🦜 Avistamiento de Fauna</h3>
+        <div class="attr-dist">En la propiedad · Gratis</div>
+        <p class="attr-desc">Sin moverte de Family Wolf: lapas rojas, monos carablanca, iguanas, tucanes y decenas de aves tropicales como tus vecinos diarios.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#051409;" height="80">
+  <path fill="#ef476f" d="M0,90L80,72C160,54,320,18,480,28C640,38,800,80,960,80C1120,80,1280,40,1360,20L1440,0L1440,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     INSTAGRAM STRIP
+══════════════════════════════════════════════════════ -->
+<section class="vibe-strip">
+  <div style="font-size:3.5rem;margin-bottom:1rem;">🌺 📸 🌺</div>
+  <h2>Síguenos en Instagram</h2>
+  <p>Magia cotidiana, amaneceres sobre el lago, aves en vuelo libre y la vida silvestre de Costa Rica — todo en nuestro perfil. ¡Únete a la familia!</p>
+  <a href="https://www.instagram.com/familywolf_" target="_blank" rel="noopener noreferrer" class="insta-pill">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <rect x="2" y="2" width="20" height="20" rx="6" stroke="#833ab4" stroke-width="2.2"/>
+      <circle cx="12" cy="12" r="4.5" stroke="#833ab4" stroke-width="2"/>
+      <circle cx="17.5" cy="6.5" r="1.5" fill="#833ab4"/>
+    </svg>
+    @familywolf_
+  </a>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#b5116a;" height="80">
+  <path fill="#e8f5e9" d="M0,0L80,18C160,36,320,72,480,72C640,72,800,36,960,18C1120,0,1280,36,1360,54L1440,72L1440,90L0,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     GETTING HERE
+══════════════════════════════════════════════════════ -->
+<section class="section getting-here" id="como-llegar">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">🗺️ Cómo Llegar</p>
+      <h2 class="section-title">Tu Camino al Paraíso</h2>
+      <p class="section-desc">Llegar a Paquera es parte de la aventura. El viaje en ferry por el Golfo de Nicoya es una experiencia que comienza el espíritu Pura Vida.</p>
+    </div>
+
+    <div class="transport-grid">
+      <div class="transport-step">
+        <div class="transport-num">1</div>
+        <div class="transport-icon">✈️</div>
+        <div class="transport-title">Llega a San José</div>
+        <p class="transport-desc">Vuela al Aeropuerto Internacional Juan Santamaría (SJO). Desde ahí, toma la autopista hacia el Puerto de Puntarenas.</p>
+        <p class="transport-tip">⏱ ~1.5h en auto desde el aeropuerto</p>
+      </div>
+      <div class="transport-step">
+        <div class="transport-num">2</div>
+        <div class="transport-icon">⛴️</div>
+        <div class="transport-title">Ferry a Paquera</div>
+        <p class="transport-desc">Desde el muelle de Puntarenas, toma el ferry Naviera Tambor o Coonatramar hacia Paquera. Una travesía espectacular de 1.5h por el Golfo de Nicoya.</p>
+        <p class="transport-tip">⏱ ~1.5h de travesía · Salidas frecuentes</p>
+      </div>
+      <div class="transport-step">
+        <div class="transport-num">3</div>
+        <div class="transport-icon">🚗</div>
+        <div class="transport-title">De Paquera a Family Wolf</div>
+        <p class="transport-desc">Al bajar del ferry, toma la ruta hacia El Chorro. Te enviamos las instrucciones exactas y coordenadas GPS por WhatsApp al confirmar tu reserva.</p>
+        <p class="transport-tip">⏱ ~10 min desde el muelle de Paquera</p>
+      </div>
+    </div>
+
+    <div class="map-cta-box">
+      <div>
+        <h3>¿Necesitas indicaciones exactas?</h3>
+        <p>Te enviamos coordenadas GPS y guía paso a paso al confirmar tu reserva. ¡El anfitrión te acompaña desde el primer mensaje!</p>
+      </div>
+      <div class="map-btns">
+        <a href="https://www.google.com/maps/search/?api=1&query=9.8195985,-84.9339724"
+           target="_blank" rel="noopener noreferrer" class="btn-map gmap">
+          📍 Ver en Google Maps
+        </a>
+        <a href="https://wa.me/50661235061"
+           target="_blank" rel="noopener noreferrer" class="btn-map wapp">
+          💬 WhatsApp Directo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" style="background:#e8f5e9;" height="80">
+  <path fill="#012030" d="M0,0L80,18C160,36,320,72,480,72C640,72,800,36,960,18C1120,0,1280,36,1360,54L1440,72L1440,90L0,90Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     BOOKING
+══════════════════════════════════════════════════════ -->
+<section class="section booking-sec" id="reservar">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">🌟 Elige Tu Plataforma 🌟</p>
+      <h2 class="section-title">Reserva Tu Escapada</h2>
+      <p class="section-desc">Pago seguro, disponibilidad en tiempo real y cancelación flexible. Elige la plataforma que prefieras y asegura tu lugar en el paraíso.</p>
+    </div>
+    <div class="bk-cards">
+      <a href="https://www.airbnb.es/rooms/1594175512173747674"
+         target="_blank" rel="noopener noreferrer" class="bk-card air">
+        <div class="bk-logo-row">
+          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="19" fill="rgba(255,90,95,.15)" stroke="#ff5a5f" stroke-width="1"/>
+            <path d="M20 8C15 8 11 12.5 11 18c0 7.5 9 18 9 18s9-10.5 9-18c0-5.5-4-10-9-10z" fill="#ff5a5f"/>
+            <circle cx="20" cy="18" r="3.5" fill="white"/>
+          </svg>
+          <span class="bk-platform air">airbnb</span>
+        </div>
+        <div class="star-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <h3 class="bk-card-title">Lobo Familiar · El Chorro Home</h3>
+        <p class="bk-card-desc">Casa contenedor con vistas al lago en Paquera, Costa Rica. Incluye protección al huésped y soporte 24/7.</p>
+        <span class="bk-btn air">Ver disponibilidad →</span>
+      </a>
+      <a href="https://www.booking.com/hotel/cr/lodge-el-chorro.es.html?aid=2311236&label=es-es-booking-desktop-onknyt5TBrS8m9RnGd%2A6fgS652829001115%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9047034%3Ali%3Adec%3Adm&sid=d91fb12f30cbfdbdac4f2798bbcaf27b"
+         target="_blank" rel="noopener noreferrer" class="bk-card bkm">
+        <div class="bk-logo-row">
+          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="8" fill="#0071c2"/>
+            <text x="20" y="27" text-anchor="middle" font-size="17" font-weight="900" font-family="Arial,sans-serif" fill="white">B.</text>
+          </svg>
+          <span class="bk-platform bkm">Booking.com</span>
+        </div>
+        <div class="star-row"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <h3 class="bk-card-title">Lodge El Chorro · Paquera</h3>
+        <p class="bk-card-desc">Encuentra las mejores tarifas garantizadas. Sin cargos ocultos, confirmación inmediata.</p>
+        <span class="bk-btn bkm">Ver disponibilidad →</span>
+      </a>
+    </div>
+    <p style="text-align:center;color:rgba(255,255,255,.4);margin-top:2.5rem;font-size:.85rem;letter-spacing:1px;">
+      🦜 ¿Tienes preguntas? Escríbenos en Instagram <strong>@familywolf_</strong>
+    </p>
+  </div>
+</section>
+
+<svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" style="background:#001f2f;" height="60">
+  <path fill="#020c05" d="M0,70L120,55C240,40,480,10,720,10C960,10,1200,40,1320,55L1440,70L1440,70L0,70Z"/>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">
+    <!-- Mini version of the FW badge -->
+    <svg width="72" height="72" viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="100" cy="100" r="99" fill="#182430" opacity=".7"/>
+      <circle cx="100" cy="100" r="89" fill="#3badc8" opacity=".5"/>
+      <circle cx="100" cy="100" r="79" fill="none" stroke="#f5a812" stroke-width="9" opacity=".6"/>
+      <text x="27" y="155" font-family="Impact,'Arial Black',sans-serif" font-size="84" font-weight="900"
+            fill="#44cc22" stroke="#0a2e0a" stroke-width="4" paint-order="stroke" opacity=".65">FW</text>
+    </svg>
+  </div>
+  <p class="footer-name">Family Wolf</p>
+  <p class="footer-loc">📍 Paquera, Puntarenas, Costa Rica</p>
+  <p class="footer-pv">¡Pura Vida!</p>
+  <nav class="footer-links" aria-label="Footer links">
+    <a href="https://www.instagram.com/familywolf_" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.airbnb.es/rooms/1594175512173747674" target="_blank" rel="noopener noreferrer">Airbnb</a>
+    <a href="https://www.booking.com/hotel/cr/lodge-el-chorro.es.html" target="_blank" rel="noopener noreferrer">Booking.com</a>
+    <a href="https://wa.me/50661235061" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="#como-llegar">Cómo Llegar</a>
+    <a href="#reviews">Reseñas</a>
+  </nav>
+  <p class="footer-copy">© 2026 Family Wolf · El Chorro Home · Costa Rica · Todos los derechos reservados</p>
+</footer>
+
+<!-- Floating WhatsApp CTA -->
+<a href="https://wa.me/50661235061?text=Hola%2C%20me%20interesa%20reservar%20en%20Family%20Wolf%20El%20Chorro%20Home%20%F0%9F%90%BA"
+   target="_blank" rel="noopener noreferrer"
+   class="wa-float" aria-label="Contáctanos por WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.432.652 4.71 1.79 6.674L2 30l7.54-1.764A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/>
+    <path d="M16 4.5c-6.351 0-11.5 5.149-11.5 11.5 0 2.12.574 4.103 1.574 5.81l.22.37-1.14 4.166 4.29-1.123.358.21A11.46 11.46 0 0016 27.5c6.351 0 11.5-5.149 11.5-11.5S22.351 4.5 16 4.5z" fill="#25d366"/>
+    <path d="M11.8 10.2c-.3-.7-.65-.72-1-.73-.26-.01-.56-.01-.86-.01-.3 0-.79.11-1.2.56-.41.45-1.57 1.53-1.57 3.74s1.61 4.34 1.83 4.64c.23.3 3.12 4.97 7.68 6.78 3.8 1.5 4.57 1.2 5.39 1.13.82-.08 2.65-1.08 3.02-2.13.38-1.05.38-1.95.27-2.13-.11-.19-.41-.3-.86-.52-.45-.23-2.65-1.31-3.06-1.46-.41-.15-.71-.23-1.01.23-.3.45-1.16 1.46-1.42 1.76-.26.3-.52.34-.97.11-.45-.23-1.9-.7-3.62-2.23-1.34-1.19-2.24-2.66-2.5-3.11-.26-.45-.03-.69.2-.92.2-.2.45-.52.67-.79.23-.27.3-.46.45-.76.15-.3.08-.57-.04-.79-.11-.23-.97-2.47-1.37-3.37z" fill="#fff"/>
+  </svg>
+  <span>¿Preguntas? Escríbenos</span>
+</a>
+
+<script>
+  // Ocean surface sparkles (sunset light on water)
+  const spC = document.getElementById('oceanSparkles');
+  if(spC){
+    for(let i=0;i<38;i++){
+      const s=document.createElement('div'); s.className='sparkle';
+      s.style.left=(Math.random()*100)+'%';
+      s.style.top=(20+Math.random()*75)+'%';
+      s.style.animationDelay=(Math.random()*4)+'s';
+      s.style.animationDuration=(1.8+Math.random()*2.8)+'s';
+      const t=parseFloat(s.style.top);
+      const sc=0.5+t/100;
+      s.style.transform=`scale(${sc.toFixed(2)})`;
+      spC.appendChild(s);
+    }
+  }
+
+  // Scroll-spy: highlight active nav link based on current section
+  (function(){
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    if(!navLinks.length) return;
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          navLinks.forEach(a=>a.classList.remove('active'));
+          const active = [...navLinks].find(a=>a.getAttribute('href')==='#'+e.target.id);
+          if(active) active.classList.add('active');
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(s=>io.observe(s));
+  })();
+</script>
+</body>
+</html>

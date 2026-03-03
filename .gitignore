@@ -1,0 +1,14 @@
+# Sensitive credentials
+credentials.json
+token.json
+.env
+
+# Agent/pipeline internals
+.tmp/
+directives/
+execution/
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+requirements.txt
+user_voice.txt
