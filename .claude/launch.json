@@ -1,0 +1,47 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Static Site (index.html)",
+      "runtimeExecutable": "C:\\Python311\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "8282"],
+      "port": 8282
+    },
+    {
+      "name": "Pipeline: Full Run",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["execution/run_pipeline.py"],
+      "port": 9001
+    },
+    {
+      "name": "Pipeline: Step 1 — Scrape Instagram",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["execution/run_pipeline.py", "--step", "1"],
+      "port": 9002
+    },
+    {
+      "name": "Pipeline: Step 2 — Transcribe Videos",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["execution/run_pipeline.py", "--step", "2"],
+      "port": 9003
+    },
+    {
+      "name": "Pipeline: Step 3 — Extract Insights",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["execution/run_pipeline.py", "--step", "3"],
+      "port": 9004
+    },
+    {
+      "name": "Pipeline: Step 4 — Generate Scripts",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["execution/run_pipeline.py", "--step", "4"],
+      "port": 9005
+    },
+    {
+      "name": "Setup Windows Scheduler",
+      "runtimeExecutable": ".venv/Scripts/python.exe",
+      "runtimeArgs": ["execution/setup_scheduler.py"],
+      "port": 9006
+    }
+  ]
+}
